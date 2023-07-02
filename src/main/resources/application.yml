@@ -13,3 +13,5 @@ spring:
       local
     include:
       - db
+      - service
+      - server
