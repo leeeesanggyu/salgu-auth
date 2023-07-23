@@ -1,11 +1,11 @@
-package com.salgu.salguauth.util.response;
+package com.salgu.salguauth.account.responsecode;
 
+import com.salgu.salguauth.util.response.ResponseCode;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum ResponseCodeEnum implements ResponseCode {
-    SUCCESS(0,"success"),
-    FAILED(-1,"failed"),
+public enum AccountResponseCodeEnum implements ResponseCode {
+    VERIFICATION_ERROR(-1,"유저 검증 오류"),
     ;
 
     private final int code;

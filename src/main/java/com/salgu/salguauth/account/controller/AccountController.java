@@ -20,7 +20,7 @@ public class AccountController {
     public ResponseWithData signIn(
             @RequestBody SignInDto.Req req
     ) {
-        boolean result = signInService.userVerification(req.getEmail());
-        return ResponseWithData.success(result);
+        signInService.signIn(req);
+        return ResponseWithData.success("로그인 완료");
     }
 }

@@ -1,0 +1,13 @@
+2023-07-24 03:59:12.779 [34mINFO [0;39m [35m806 [0;39m --- [main] [, ] [36mc.s.s.SalguAuthApplication[0;39m : Starting SalguAuthApplication using Java 17.0.6 with PID 65459 (/Users/salgu/project/salgu/salgu-auth/build/classes/java/main started by salgu in /Users/salgu/project/salgu/salgu-auth)
+2023-07-24 03:59:12.782 [34mINFO [0;39m [35m809 [0;39m --- [main] [, ] [36mc.s.s.SalguAuthApplication[0;39m : The following 4 profiles are active: "db", "service", "server", "local"
+2023-07-24 03:59:13.436 [34mINFO [0;39m [35m1463[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat initialized with port(s): 18088 (http)
+2023-07-24 03:59:13.494 [34mINFO [0;39m [35m1521[0;39m --- [main] [, ] [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m : Root WebApplicationContext: initialization completed in 682 ms
+2023-07-24 03:59:13.732 [34mINFO [0;39m [35m1759[0;39m --- [main] [, ] [36mo.s.b.w.e.t.TomcatWebServer[0;39m : Tomcat started on port(s): 18088 (http) with context path ''
+2023-07-24 03:59:13.738 [34mINFO [0;39m [35m1765[0;39m --- [main] [, ] [36mc.s.s.SalguAuthApplication[0;39m : Started SalguAuthApplication in 1.265 seconds (process running for 1.877)
+2023-07-24 03:59:20.231 [34mINFO [0;39m [35m8258[0;39m --- [http-nio-18088-exec-1] [, ] [36mo.s.w.s.DispatcherServlet[0;39m : Initializing Servlet 'dispatcherServlet'
+2023-07-24 03:59:20.236 [34mINFO [0;39m [35m8263[0;39m --- [http-nio-18088-exec-1] [, ] [36mo.s.w.s.DispatcherServlet[0;39m : Completed initialization in 1 ms
+2023-07-24 03:59:20.331 [34mINFO [0;39m [35m8358[0;39m --- [http-nio-18088-exec-1] [, ] [36mc.s.s.util.AopLogger[0;39m : Request: POST /sign-in [{}] < 127.0.0.1 / 127.0.0.1 (27ms) null PostmanRuntime/7.29.2
+2023-07-24 03:59:20.333 [34mINFO [0;39m [35m8360[0;39m --- [http-nio-18088-exec-1] [, ] [36mc.s.s.u.e.GlobalExceptionHandler[0;39m : 유저 검증 오류
+2023-07-24 03:59:20.334 [34mINFO [0;39m [35m8361[0;39m --- [http-nio-18088-exec-1] [, ] [36mc.s.s.util.AopLogger[0;39m : Request: POST /sign-in [{}] < 127.0.0.1 / 127.0.0.1 (1ms) null PostmanRuntime/7.29.2
+2023-07-24 03:59:38.134 [34mINFO [0;39m [35m26161[0;39m --- [http-nio-18088-exec-2] [, ] [36mc.s.s.a.s.SignInService[0;39m : API_URL + /user/verification => ResponseWithData(response=ResponseBuilder(output=0, result=success), data=검증 완료)
+2023-07-24 03:59:38.138 [34mINFO [0;39m [35m26165[0;39m --- [http-nio-18088-exec-2] [, ] [36mc.s.s.util.AopLogger[0;39m : Request: POST /sign-in [{}] < 127.0.0.1 / 127.0.0.1 (263ms) null PostmanRuntime/7.29.2

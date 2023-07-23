@@ -13,7 +13,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({
     })
     public ResponseWithData customException(CustomException e) {
-        log.info("", e.getMessage());
+        log.info("{}", e.getMessage());
         return ResponseWithData.failed(e.getResponseCodeEnum()).message(e.getMessage());
     }
 

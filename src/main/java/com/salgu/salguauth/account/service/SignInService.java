@@ -1,6 +1,8 @@
 package com.salgu.salguauth.account.service;
 
 import com.salgu.salguauth.account.dto.SignInDto;
+import com.salgu.salguauth.account.exception.AccountException;
+import com.salgu.salguauth.account.responsecode.AccountResponseCodeEnum;
 import com.salgu.salguauth.util.response.ResponseWithData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +20,11 @@ public class SignInService {
 
     private final RestTemplate restTemplate;
 
-    public boolean userVerification(String email) {
+    public void signIn(SignInDto.Req dto) {
+        userVerification(dto.getEmail());
+    }
+
+    public void userVerification(String email) {
         ResponseWithData result = null;
         try {
             result = restTemplate.getForObject(
@@ -27,9 +33,11 @@ public class SignInService {
             );
             log.info("API_URL + /user/verification => {}", result);
         } catch (Exception e) {
-            return false;
+            throw new AccountException(AccountResponseCodeEnum.VERIFICATION_ERROR);
         }
 
-        return result.getResponse().getOutput() == 0;
+        if (result.getResponse().getOutput() != 0) {
+            throw new AccountException(AccountResponseCodeEnum.VERIFICATION_ERROR);
+        }
     }
 }
