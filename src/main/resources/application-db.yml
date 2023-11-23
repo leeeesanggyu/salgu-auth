@@ -33,7 +33,7 @@ spring:
       mode: always
 
 profile:
-  message: "hi, local!"
+  message: "hi,  local!"
 
 --- # dev properties
 spring:
